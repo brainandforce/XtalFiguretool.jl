@@ -1,0 +1,12 @@
+name = "XtalFiguretool"
+uuid = "942a38cd-0d9f-4d5c-9306-620a0f257916"
+authors = ["Brandon Flores <bsflores@wisc.edu>", "Amber Lim <xalim@wisc.edu>"]
+version = "0.1.0"
+
+[deps]
+Colors = "5ae59095-9a9b-59fe-a467-6f913c188581"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+WGLMakie = "276b4fcb-3e11-5398-bf8b-a0c2d153d008"
+Xtal = "b7bf5f09-dce4-461b-b741-5180c76f4cfe"
