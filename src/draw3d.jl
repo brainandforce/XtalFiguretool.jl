@@ -5,7 +5,7 @@ A submodule containing methods for plotting 3D objects.
 """
 module Draw3D
 
-using ..XtalMakie
+using ..XtalFiguretool
 using StaticArrays
 using Colors
 using Xtal
