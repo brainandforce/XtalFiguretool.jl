@@ -25,6 +25,7 @@ Creates a surface corresponding to a linear combination of real spherical harmon
 function spherical_harmonic(
     s::SphericalComponents{Lmax};
     offset::AbstractVector{<:Real} = [0, 0, 0],
+    new_fig::Bool = true,
     grit = 32,
     gradient = true,
     kwargs...
@@ -39,15 +40,29 @@ function spherical_harmonic(
     else
         crange = (-1, 1)
     end
-    return WGLMakie.surface(
+    if new_fig
+        println(new_fig)
+        return WGLMakie.surface(
         x, y, z,
         color = (gradient ? r.(sph) : sign.(r.(sph))),
         colormap = :bwr,
         colorrange = crange,
         shading = false,
-        figure = (; resolution = (1000, 900));
+        #figure = (; resolution = (1000, 900));
         kwargs...
     )
+    else
+        println(new_fig)
+    return WGLMakie.surface!(
+        x, y, z,
+        color = (gradient ? r.(sph) : sign.(r.(sph))),
+        colormap = :bwr,
+        colorrange = crange,
+        shading = false,
+        #figure = (; resolution = (1000, 900));
+        kwargs...
+    )
+    end
 end
 
 """
